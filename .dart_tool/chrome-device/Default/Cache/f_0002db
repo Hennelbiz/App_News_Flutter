@@ -1,0 +1,405 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/material/page.dart', 'packages/movies_app_tutorial/screens/news_article_detail_screen.dart', 'packages/movies_app_tutorial/ViewModels/news_article_ViewModel.dart', 'packages/flutter/src/widgets/scroll_view.dart', 'packages/flutter/src/rendering/sliver_grid.dart', 'packages/flutter/src/material/grid_tile.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/movies_app_tutorial/widgets/circle_widget.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/rendering/paragraph.dart'], (function load__packages__movies_app_tutorial__widgets__news_grid_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__material__page$46dart, packages__movies_app_tutorial__screens__news_article_detail_screen$46dart, packages__movies_app_tutorial__ViewModels__news_article_ViewModel$46dart, packages__flutter__src__widgets__scroll_view$46dart, packages__flutter__src__rendering__sliver_grid$46dart, packages__flutter__src__material__grid_tile$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__movies_app_tutorial__widgets__circle_widget$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__rendering__paragraph$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const navigator = packages__flutter__src__widgets__widget_span$46dart.src__widgets__navigator;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const gesture_detector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__gesture_detector;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const page = packages__flutter__src__material__page$46dart.src__material__page;
+  const news_article_detail_screen = packages__movies_app_tutorial__screens__news_article_detail_screen$46dart.screens__news_article_detail_screen;
+  const news_article_ViewModel = packages__movies_app_tutorial__ViewModels__news_article_ViewModel$46dart.ViewModels__news_article_ViewModel;
+  const scroll_view = packages__flutter__src__widgets__scroll_view$46dart.src__widgets__scroll_view;
+  const sliver_grid = packages__flutter__src__rendering__sliver_grid$46dart.src__rendering__sliver_grid;
+  const grid_tile = packages__flutter__src__material__grid_tile$46dart.src__material__grid_tile;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const circle_widget = packages__movies_app_tutorial__widgets__circle_widget$46dart.widgets__circle_widget;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const paragraph = packages__flutter__src__rendering__paragraph$46dart.src__rendering__paragraph;
+  var news_grid = Object.create(dart.library);
+  var $_get = dartx._get;
+  var $length = dartx.length;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    NewsArticleViewModelL: () => (T.NewsArticleViewModelL = dart.constFn(dart.legacy(news_article_ViewModel.NewsArticleViewModel)))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    NewsArticleDetailScreenL: () => (T.NewsArticleDetailScreenL = dart.constFn(dart.legacy(news_article_detail_screen.NewsArticleDetailScreen)))(),
+    BuildContextL: () => (T.BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))(),
+    BuildContextLToNewsArticleDetailScreenL: () => (T.BuildContextLToNewsArticleDetailScreenL = dart.constFn(dart.fnType(T.NewsArticleDetailScreenL(), [T.BuildContextL()])))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    GestureDetectorL: () => (T.GestureDetectorL = dart.constFn(dart.legacy(gesture_detector.GestureDetector)))(),
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    BuildContextLAndintLToGestureDetectorL: () => (T.BuildContextLAndintLToGestureDetectorL = dart.constFn(dart.fnType(T.GestureDetectorL(), [T.BuildContextL(), T.intL()])))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "article",
+        [_Location_column]: 42,
+        [_Location_line]: 15,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 15,
+        [_Location_file]: "file:///C:/PruebaGit/ProyectosFlutter/movies_app_tutorial/lib/widgets/news_grid.dart"
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 20,
+        [EdgeInsets_right]: 10,
+        [EdgeInsets_top]: 20,
+        [EdgeInsets_left]: 10
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "urlToImage",
+        [_Location_column]: 19,
+        [_Location_line]: 39,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[6] || CT.C6], T._LocationL());
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[5] || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 38,
+        [_Location_file]: "file:///C:/PruebaGit/ProyectosFlutter/movies_app_tutorial/lib/widgets/news_grid.dart"
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 17,
+        [_Location_line]: 36,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 38,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.constList([C[9] || CT.C9, C[10] || CT.C10], T._LocationL());
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[8] || CT.C8,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 34,
+        [_Location_file]: "file:///C:/PruebaGit/ProyectosFlutter/movies_app_tutorial/lib/widgets/news_grid.dart"
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 0,
+        [EdgeInsets_right]: 15,
+        [EdgeInsets_top]: 0,
+        [EdgeInsets_left]: 15
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 25,
+        [_Location_line]: 44,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 17,
+        [_Location_line]: 45,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "maxLines",
+        [_Location_column]: 17,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "overflow",
+        [_Location_column]: 17,
+        [_Location_line]: 47,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.constList([C[14] || CT.C14, C[15] || CT.C15, C[16] || CT.C16, C[17] || CT.C17], T._LocationL());
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[13] || CT.C13,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 43,
+        [_Location_file]: "file:///C:/PruebaGit/ProyectosFlutter/movies_app_tutorial/lib/widgets/news_grid.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 15,
+        [_Location_line]: 42,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 43,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.constList([C[20] || CT.C20, C[21] || CT.C21], T._LocationL());
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[19] || CT.C19,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 41,
+        [_Location_file]: "file:///C:/PruebaGit/ProyectosFlutter/movies_app_tutorial/lib/widgets/news_grid.dart"
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "footer",
+        [_Location_column]: 13,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.constList([C[24] || CT.C24, C[25] || CT.C25], T._LocationL());
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[23] || CT.C23,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 33,
+        [_Location_file]: "file:///C:/PruebaGit/ProyectosFlutter/movies_app_tutorial/lib/widgets/news_grid.dart"
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 11,
+        [_Location_line]: 30,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 33,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.constList([C[28] || CT.C28, C[29] || CT.C29], T._LocationL());
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[27] || CT.C27,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 29,
+        [_Location_file]: "file:///C:/PruebaGit/ProyectosFlutter/movies_app_tutorial/lib/widgets/news_grid.dart"
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "gridDelegate",
+        [_Location_column]: 7,
+        [_Location_line]: 24,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemBuilder",
+        [_Location_column]: 7,
+        [_Location_line]: 26,
+        [_Location_file]: null
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemCount",
+        [_Location_column]: 7,
+        [_Location_line]: 53,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.constList([C[32] || CT.C32, C[33] || CT.C33, C[34] || CT.C34], T._LocationL());
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[31] || CT.C31,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 23,
+        [_Location_file]: "file:///C:/PruebaGit/ProyectosFlutter/movies_app_tutorial/lib/widgets/news_grid.dart"
+      });
+    }
+  }, false);
+  var C = Array(35).fill(void 0);
+  var I = ["package:movies_app_tutorial/widgets/news_grid.dart"];
+  var articles$ = dart.privateName(news_grid, "NewsGrid.articles");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  var _showNewsArticleDetails = dart.privateName(news_grid, "_showNewsArticleDetails");
+  var EdgeInsets_bottom = dart.privateName(edge_insets, "EdgeInsets.bottom");
+  var EdgeInsets_right = dart.privateName(edge_insets, "EdgeInsets.right");
+  var EdgeInsets_top = dart.privateName(edge_insets, "EdgeInsets.top");
+  var EdgeInsets_left = dart.privateName(edge_insets, "EdgeInsets.left");
+  news_grid.NewsGrid = class NewsGrid extends framework.StatelessWidget {
+    get articles() {
+      return this[articles$];
+    }
+    set articles(value) {
+      super.articles = value;
+    }
+    [_showNewsArticleDetails](context, article) {
+      navigator.Navigator.push(dart.dynamic, framework.BuildContext.as(context), new page.MaterialPageRoute.new({builder: dart.fn(_ => new news_article_detail_screen.NewsArticleDetailScreen.new({article: T.NewsArticleViewModelL().as(article), $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), T.BuildContextLToNewsArticleDetailScreenL())}));
+    }
+    build(context) {
+      return new scroll_view.GridView.builder({gridDelegate: new sliver_grid.SliverGridDelegateWithFixedCrossAxisCount.new({crossAxisCount: 2}), itemBuilder: dart.fn((_, index) => {
+          let article = this.articles[$_get](index);
+          return new gesture_detector.GestureDetector.new({onTap: dart.fn(() => {
+              this[_showNewsArticleDetails](context, article);
+            }, T.VoidToNull()), child: new grid_tile.GridTile.new({child: new container.Container.new({margin: C[3] || CT.C3, child: new circle_widget.CircleImage.new({urlToImage: article.urlToImage, $creationLocationd_0dea112b090073317d4: C[4] || CT.C4}), $creationLocationd_0dea112b090073317d4: C[7] || CT.C7}), footer: new container.Container.new({padding: C[11] || CT.C11, child: new text.Text.new(article.title, {style: new text_style.TextStyle.new({fontWeight: ui.FontWeight.bold}), maxLines: 1, overflow: paragraph.TextOverflow.ellipsis, $creationLocationd_0dea112b090073317d4: C[12] || CT.C12}), $creationLocationd_0dea112b090073317d4: C[18] || CT.C18}), $creationLocationd_0dea112b090073317d4: C[22] || CT.C22}), $creationLocationd_0dea112b090073317d4: C[26] || CT.C26});
+        }, T.BuildContextLAndintLToGestureDetectorL()), itemCount: this.articles[$length], $creationLocationd_0dea112b090073317d4: C[30] || CT.C30});
+    }
+  };
+  (news_grid.NewsGrid.new = function(opts) {
+    let articles = opts && 'articles' in opts ? opts.articles : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[articles$] = articles;
+    news_grid.NewsGrid.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = news_grid.NewsGrid.prototype;
+  dart.addTypeTests(news_grid.NewsGrid);
+  dart.addTypeCaches(news_grid.NewsGrid);
+  dart.setMethodSignature(news_grid.NewsGrid, () => ({
+    __proto__: dart.getMethods(news_grid.NewsGrid.__proto__),
+    [_showNewsArticleDetails]: dart.fnType(dart.void, [dart.dynamic, dart.dynamic]),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(news_grid.NewsGrid, I[0]);
+  dart.setFieldSignature(news_grid.NewsGrid, () => ({
+    __proto__: dart.getFields(news_grid.NewsGrid.__proto__),
+    articles: dart.finalFieldType(dart.legacy(core.List$(dart.legacy(news_article_ViewModel.NewsArticleViewModel))))
+  }));
+  dart.trackLibraries("packages/movies_app_tutorial/widgets/news_grid.dart", {
+    "package:movies_app_tutorial/widgets/news_grid.dart": news_grid
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["news_grid.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAMmC;;;;;;8BAGJ,SAAS;AAQnC,MAPS,iEACR,OAAO,GACP,yCACW,QAAC,KACD,kGAAiC,OAAO;IAIvD;UAG0B;AACxB,YAAgB,iDAEV,+EAA0D,kBACjD,SAAC,GAAG;AACX,wBAAU,AAAQ,qBAAC,KAAK;AAE5B,gBAAO,kDACE;AACoC,cAAzC,8BAAwB,OAAO,EAAE,OAAO;uCAEnC,mCACE,2DAII,+CACO,AAAQ,OAAD,uIAEjB,8DAEC,kBACL,AAAQ,OAAD,gBACA,0CAAiC,gCAC9B,aACa;mEAMjB,AAAS;IAE7B;;;QA/Ce;;;AAAf;;EAAyB","file":"../../../../../packages/movies_app_tutorial/widgets/news_grid.dart.lib.js"}');
+  // Exports:
+  return {
+    widgets__news_grid: news_grid
+  };
+}));
+
+//# sourceMappingURL=news_grid.dart.lib.js.map
